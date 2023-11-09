@@ -1,12 +1,10 @@
 <template>
   <div :data-theme="theme">
-    <div class="navbar fixed bg-base-100 z-40 shadow-sm">
-      <div class="navbar-start">
-        
-      </div>
-      <div class="navbar-center hidden lg:flex items-center">
+    <div class="navbar bg-transparent z-40">
+      <div class="navbar-start"></div>
+      <div class="navbar-center gap-4 lg:flex items-center">
         <img src="../assets/images/easy-joey-logo-black.png" alt="Your Logo" class="h-8 w-8">
-        <a class="btn btn-ghost md:text-2xl font-luciole mt-3">EasyJoey</a>
+        <nuxt-link class="btn btn-ghost md:text-2xl font-luciole mt-3" to="/">EasyJoey</nuxt-link>
       </div>
       <div class="navbar-end">
         <!-- <select v-model="theme" class="select select-primary md:w-full md:max-w-xs">
@@ -56,12 +54,13 @@ const THEMES = [
 ];
 export default {
   setup () {
-    const theme = ref(null);
+    const theme = ref('light');
     watch(theme, (value) => {
       localStorage.setItem('daisyui-theme', value);
     });
     onMounted(() => {
-      theme.value = localStorage.getItem('daisyui-theme') || 'dark';
+      // theme.value = 'light'
+      theme.value = localStorage.getItem('daisyui-theme') || 'light';
     });
     return {
       theme,

@@ -177,9 +177,10 @@ export default {
   },
   setup () {
     definePageMeta({
-      layout: 'main',
+      layout: 'default',
       hideFooterDetails: true,
     });
+
     useHead({
       title: 'About Us - EasyJoey',
       description: 'Meet our team',

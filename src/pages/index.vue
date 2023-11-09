@@ -1,6 +1,5 @@
 <template>
-
-<div class="hero min-h-screen bg-white">
+<div class="hero" :style="{ 'min-height': screenHeightWitoutNavbar }">
   <div class="hero-content text-center">
     <div class="max-w-4xl mx-auto mt-12">
       <h1 data-aos="zoom-in" class="text-5xl md:text-6xl font-bold mb-6">Collaborative Health Records for Pediatricians & Moms</h1> <!-- Adjusted text size -->
@@ -60,7 +59,11 @@
       system. Streamlined processes let you focus on your passion – caring for kids. With more time and an organized system, 
       you can grow your practice, welcome more families, and create a thriving, joyful environment!</p>
     <!-- Center justified image -->
-    <img src="../assets/images/easy-joey-grow.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded" data-aos="zoom-in" />
+    <img 
+      src="../assets/images/easy-joey-grow.png" 
+      alt="Your Image Description" 
+      class="max-w-xl mx-auto mt-4 rounded w-[100%]" 
+      data-aos="zoom-in" />
   </div>
 </generic-panel>
 
@@ -73,7 +76,7 @@
       This smooth communication not only builds trust but also creates a connected and engaged community. 
       It's more than just care; it's about nurturing a supportive and loyal healthcare family.</p>
     <!-- Center justified image -->
-    <img src="../assets/images/easy-joey-better.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded" data-aos="zoom-in" />
+    <img src="../assets/images/easy-joey-better.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded w-[100%]" data-aos="zoom-in" />
   </div>
 </generic-panel>
 
@@ -83,16 +86,15 @@
     <p class="md:text-lg max-w-xl mx-auto" data-aos="zoom-in"></p>
     <!-- Center justified video -->
     <video
-  autoplay
-  loop
-  muted
-  playsinline
-  class="max-w-3xl mx-auto mt-4 rounded border border-gray-800"
->
-  <source src="../assets/videos/easy-joey-1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+      autoplay
+      loop
+      muted
+      playsinline
+      class="max-w-3xl mx-auto mt-4 rounded border border-gray-800 w-[100%]"
+    >
+      <source src="../assets/videos/easy-joey-1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </generic-panel>
 
@@ -106,30 +108,40 @@
       
       <br><br>EasyJoey CARES: <br>Collaborative, Auditable, Rights to Data, Encrypted, and Smart. </p>
     <!-- Center justified images with text -->
-    <div class="flex justify-center mt-4">
-      <div class="mx-2 w-1/4 text-left">
-        <img src="../assets/images/easy-joey-c.png" alt="Your Image Description" class="w-full rounded" data-aos="zoom-in" />
-        <h2 class="text-lg font-bold mt-2 text-center">Collaborative</h2>
+    <div class="flex flex-col md:flex-row justify-center mt-4 gap-4">
+      <div class="flex flex-col">
+        <div class="flex justify-center h-[150px]">
+          <img src="../assets/images/easy-joey-c.png" alt="Your Image Description" class="rounded h-[100%]" data-aos="zoom-in" />
+        </div>
+        <h2 class="text-lg font-bold mt-2">Collaborative</h2>
         <p class="text-sm">Simplified medical record sharing. With just a few clicks, you securely manage and share records with patients and colleagues. It's FHIR API compliant for efficient data use by other facilities and offers versatile health APIs for seamless integration.</p>
       </div>
-      <div class="mx-2 w-1/4 text-left">
-        <img src="../assets/images/easy-joey-a.png" alt="Your Image Description" class="w-full rounded" data-aos="zoom-in" />
-        <h2 class="text-lg font-bold mt-2 text-center">Auditable</h2>
+      <div class="flex flex-col">
+        <div class="flex justify-center h-[150px]">
+          <img src="../assets/images/easy-joey-a.png" alt="Your Image Description" class="rounded h-[100%]" data-aos="zoom-in" />
+        </div>
+        <h2 class="text-lg font-bold mt-2">Auditable</h2>
         <p class="text-sm">On top of privacy compliance, it's 'Record-Centric' approach and granular access control allows sharing with the right parties without compromising confidentiality. All actions are auditable for added security.</p>
       </div>
-      <div class="mx-2 w-1/4 text-left">
-        <img src="../assets/images/easy-joey-r.png" alt="Your Image Description" class="w-full rounded" data-aos="zoom-in" />
-        <h2 class="text-lg font-bold mt-2 text-center">Rights to Data</h2>
+      <div class="flex flex-col">
+        <div class="flex justify-center h-[150px]">
+          <img src="../assets/images/easy-joey-r.png" alt="Your Image Description" class="rounded h-[100%]" data-aos="zoom-in" />
+        </div>
+        <h2 class="text-lg font-bold mt-2">Rights to Data</h2>
         <p class="text-sm">Ownership is paramount, granting users, including patients and physicians, data control. System goes offline? No problem. EasyJoey ensures seamless offline access to patient data, guaranteeing uninterrupted tasks.</p>
       </div>
-      <div class="mx-2 w-1/4 text-left">
-        <img src="../assets/images/easy-joey-e.png" alt="Your Image Description" class="w-full rounded" data-aos="zoom-in" />
-        <h2 class="text-lg font-bold mt-2 text-center">Encrypted</h2>
+      <div class="flex flex-col">
+        <div class="flex justify-center h-[150px]">
+          <img src="../assets/images/easy-joey-e.png" alt="Your Image Description" class="rounded h-[100%]" data-aos="zoom-in" />
+        </div>
+        <h2 class="text-lg font-bold mt-2">Encrypted</h2>
         <p class="text-sm">EasyJoey optimizes security with end-to-end encryption, safeguarding your data like a private lockbox. Only authorized collaborators can access it; even our admin has no key. Patient records remain secure, with each encounter independently fortified for privacy.</p>
       </div>
-      <div class="mx-2 w-1/4 text-left">
-        <img src="../assets/images/easy-joey-s.png" alt="Your Image Description" class="w-full rounded" data-aos="zoom-in" />
-        <h2 class="text-lg font-bold mt-2 text-center">Smart</h2>
+      <div class="flex flex-col">
+        <div class="flex justify-center h-[150px]">
+          <img src="../assets/images/easy-joey-s.png" alt="Your Image Description" class="rounded h-[100%]" data-aos="zoom-in" />
+        </div>
+        <h2 class="text-lg font-bold mt-2">Smart</h2>
         <p class="text-sm">Over 50% of EMR patient notes are simply copied & pasted from others (half of Shakespeare’s Hamlet!). EasyJoey leverages generative AI to summarize medical history. Also, its AI optimizes Clinical Decision Support (CDS) and aids dictation.</p>
       </div>
     </div>
@@ -145,7 +157,7 @@
       empowering you to effortlessly manage health records. Say goodbye to steep learning curves and wasted time on training 
       and frustration. With EasyJoey, you can learn to create a medical record encounter in just 10 minutes (or less!).</p>
     <!-- Center justified image -->
-    <img src="../assets/images/easy-joey-easy.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded" data-aos="zoom-in" />
+    <img src="../assets/images/easy-joey-easy.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded w-[100%]" data-aos="zoom-in" />
   </div>
 </generic-panel>
 
@@ -157,7 +169,7 @@
       data access whether you're online or offline, all thanks to synchronization through a local database. 
       The result? Remarkable speed!</p>
     <!-- Center justified image -->
-    <img src="../assets/images/easy-joey-fast.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded" data-aos="zoom-in" />
+    <img src="../assets/images/easy-joey-fast.png" alt="Your Image Description" class="max-w-xl mx-auto mt-4 rounded w-[100%]" data-aos="zoom-in" />
   </div>
 </generic-panel>
 
@@ -189,7 +201,7 @@
 
   <generic-panel>
     <div class="flex flex-col">
-      <footer class="footer p-10 bg-base-200 text-base-content">
+      <footer class="footer p-10 text-base-content">
         <div>
           <span class="footer-title">Headquarters</span>
           <a>California HQ <br>44 Montgomerry Street San Francisco, CA</a>
@@ -208,7 +220,7 @@
           <a class="link link-hover">Cookie policy</a>
         </div>
       </footer>
-      <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <footer class="footer px-10 py-4 border-t text-base-content border-base-300">
         <div class="items-center grid-flow-col">
   <img src="../assets/images/easy-joey-logo-black.png" alt="EasyJoey Logo" class="h-8 w-8"> <!-- Adjust the path and size accordingly -->
   <p>EasyJoey <br/>Making Healthcare Data Easily Accessible to All.</p>
@@ -263,7 +275,13 @@ export default {
       ],
     });
 
-    return {};
+    const screenHeightWitoutNavbar = computed(() => {
+      return `calc(100vh - ${76}px)`;
+    });
+
+    return {
+      screenHeightWitoutNavbar,
+    };
   },
 };
 </script>
