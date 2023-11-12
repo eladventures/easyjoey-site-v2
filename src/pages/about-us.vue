@@ -5,9 +5,13 @@
       <div data-aos="fade-down" class="mb-3 bg-[#E3F3DE] py-1 px-3 rounded-full">
         <span class="text-base text-[#437336] font-primary">About Us</span>
       </div>
-      <h1 data-aos="fade-down" class="hero-heading mb-16 lg:w-[852px] font-primary">
-        Care the Extra Mile
-      </h1>
+      <h1
+  data-aos="fade-down"
+  class="hero-heading text-5xl font-bold mb-16 lg:w-[852px] font-primary"
+>
+  Care the Extra Mile
+</h1>
+      
       
       <!-- YouTube Video Embed -->
       <iframe width="1200" height="700" src="https://www.youtube.com/embed/H_JhHmS-m78?si=ITuQELjY6LJhTX-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -177,10 +181,9 @@ export default {
   },
   setup () {
     definePageMeta({
-      layout: 'default',
+      layout: 'main',
       hideFooterDetails: true,
     });
-
     useHead({
       title: 'About Us - EasyJoey',
       description: 'Meet our team',
